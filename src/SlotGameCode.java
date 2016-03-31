@@ -122,8 +122,15 @@ public class SlotGameCode {
 					System.out.println("You have " + points + " points!");
 
 					//Then it will ask user if they want to play again
-					System.out.println("Place your next bet");
+					System.out.println("Place your next bet, or hit 0 if you want to quit");
 					placeBet = input.nextInt();
+					
+					// Check to see if user wants to play again or quit
+					if (placeBet == 0) {
+						System.out.println("Thanks for playing! You ended to game with " +
+											points + " points! Awesome");
+						System.exit(0);
+					}
 				}
 
 				// If you don't want to play then this will appear
